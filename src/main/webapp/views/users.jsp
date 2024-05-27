@@ -63,18 +63,18 @@
         </tr>
     </c:forEach>
 
-    <c:forEach items="${Search}" var="user" varStatus="loop">
-        <tr>
-            <th scope="row">${loop.count}</th>
-            <td>${user.name}</td>
-            <td>${user.email}</td>
-            <td>${user.address}</td>
-            <td>${user.phone}</td>
-            <td>${user.country}</td>
-            <td><a href="/Users?action=EDIT&id=${user.id}"  class="btn btn-warning">Edit</a></td>
-            <td><a href="/Users?action=DELETE&id=${user.id}" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xoa ko')">Delete</a></td>
-        </tr>
-    </c:forEach>
+<%--    <c:forEach items="${Search}" var="user" varStatus="loop">--%>
+<%--        <tr>--%>
+<%--            <th scope="row">${loop.count}</th>--%>
+<%--            <td>${user.name}</td>--%>
+<%--            <td>${user.email}</td>--%>
+<%--            <td>${user.address}</td>--%>
+<%--            <td>${user.phone}</td>--%>
+<%--            <td>${user.country}</td>--%>
+<%--            <td><a href="/Users?action=EDIT&id=${user.id}"  class="btn btn-warning">Edit</a></td>--%>
+<%--            <td><a href="/Users?action=DELETE&id=${user.id}" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xoa ko')">Delete</a></td>--%>
+<%--        </tr>--%>
+<%--    </c:forEach>--%>
 
     <c:forEach items="${Sort}" var="user" varStatus="loop">
         <tr>

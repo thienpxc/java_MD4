@@ -23,12 +23,13 @@ public class User {
 
     }
 
-    public User(String name, String email, String password, String address, String phone) {
+    public User(String name, String email, String password, String address, String phone,String country) {
         this.name = name;
         this.email = email;
         this.password = password;
         this.address = address;
         this.phone = phone;
+        this.country = country;
     }
 
     public User(String name, String email, String password, String address) {

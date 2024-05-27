@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="63902cfa-4f2b-4e85-879a-395210b20abf" name="@127.0.0.1 Mapping">
+      <data-sources db="04fd9215-6703-4e56-b953-ab317639dab0" />
+      <scope>
+        <node kind="database" negative="1" />
+      </scope>
+    </mapping>
+    <mapping uuid="60bc8269-6c49-43ea-a450-9fd6ce2d7f9a" name="@127.0.0.1 Mapping [2]">
+      <data-sources db="f45f9582-7488-4c8b-8437-3f569a4654f9" />
+      <scope>
+        <node negative="1">
+          <node kind="database" negative="1" />
+          <node kind="schema">
+            <name qname=" studentstest" />
+            <name qname="goodsmanagement" />
+            <name qname="hk_ss4" />
+            <name qname="information_schema" />
+            <name qname="luyen_tap_8" />
+            <name qname="luyen_tap_8_bai2" />
+            <name qname="mysql" />
+            <name qname="performance_schema" />
+            <name qname="products" />
+            <name qname="qlbhlevanthien" />
+            <name qname="sell" />
+            <name qname="studentmanagement" />
+            <name qname="sys" />
+            <name qname="test" />
+            <name qname="test2" />
+            <name qname="users" />
+          </node>
+        </node>
+      </scope>
+    </mapping>
+    <mapping uuid="5720736c-e70f-41f0-98ee-86c918c3b8b0" name="Laragon MySQL Mapping">
+      <data-sources db="9730052c-2846-4712-8de0-edf6566915c1" ddl="46c313e5-9cbd-4358-bfc4-1367a61c6a15" />
+      <scope>
+        <node kind="schema">
+          <name qname="information_schema" />
+          <name qname="mysql" />
+          <name qname="performance_schema" />
+          <name qname="sys" />
+          <name qname="test2" />
+          <name qname="users" />
+        </node>
+      </scope>
+    </mapping>
+  </component>
+</project>

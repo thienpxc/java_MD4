@@ -18,4 +18,20 @@ public class UserIMPL {
             System.out.println("loi connect mysql");
         }
     }
+    public  static void  closeConnection(Connection conn){
+        try {
+            if (!conn.isClosed()){
+                conn.close();
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    public static Connection getNewConnection() {
+        try {
+            return DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

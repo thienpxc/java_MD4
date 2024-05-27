@@ -31,7 +31,6 @@ public class UserServlet extends HttpServlet {
                     List<User> users = userService.selectAllUsers();
                     req.setAttribute("users", users);
                     req.getRequestDispatcher("/views/users.jsp").forward(req, resp);
-                    System.out.println(users + "sssfsfs");
                     break;
                 case "ADD":
                     req.getRequestDispatcher("/views/add-user.jsp").forward(req, resp);
@@ -64,7 +63,7 @@ public class UserServlet extends HttpServlet {
                     } catch (SQLException e) {
                         throw new RuntimeException(e);
                     }
-                    req.setAttribute("Search", searchCountry);
+                    req.setAttribute("users", searchCountry);
                     req.setAttribute("keyword", keyword);
                     req.getRequestDispatcher("/views/users.jsp").forward(req, resp);
                     break;
@@ -75,7 +74,7 @@ public class UserServlet extends HttpServlet {
                     } catch (SQLException e) {
                         throw new RuntimeException(e);
                     }
-                    req.setAttribute("Sort", sortByName);
+                    req.setAttribute("users", sortByName);
                     req.getRequestDispatcher("/views/users.jsp").forward(req, resp);
                     break;
 
@@ -94,7 +93,6 @@ public class UserServlet extends HttpServlet {
             switch (action) {
                 case "ADD":
                     User users = getUserFromRequest(req);
-
                     try {
                         userService.insertUser(users);
                     } catch (SQLException e) {
@@ -104,23 +102,18 @@ public class UserServlet extends HttpServlet {
                     resp.sendRedirect("/Users?action=LIST");
                     break;
                 case "UPDATE":
-                    System.out.println("da vao tren");
                     String idParam = req.getParameter("id");
                     if (idParam != null && !idParam.isEmpty()) {
-                        System.out.println("da vao duoi");
                         Integer idEdit = Integer.valueOf(idParam);
                         User userEdit = getUserFromRequest(req);
                         userEdit.setId(idEdit);
-
                         try {
                             userService.updateUser(userEdit);
                         } catch (SQLException e) {
                             throw new RuntimeException(e);
                         }
-                        System.out.println("da toi day");
                         // điều hướng về trang danh sách
                         resp.sendRedirect("/Users?action=LIST");
-                        System.out.println("da qua roi");
                     } else {
                         // Xử lý trường hợp không có tham số "id"...
                     }
